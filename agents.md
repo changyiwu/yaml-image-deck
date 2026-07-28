@@ -9,7 +9,7 @@
 
 技能本身**不綁定任何特定 Agent**：生圖與打包一律使用當前環境已具備的能力，可安裝到 Claude Code、Codex、OpenCode、Antigravity 等任一技能目錄。
 
-**出處**：改寫自同作者的原始版本 [mathruffian-dot/yaml-image-deck](https://github.com/mathruffian-dot/yaml-image-deck)（2026-07-10，MIT，著作權人同為「三師爸 Sense Bar」）。差異說明寫在 `README.md` 的〈出處與授權〉。
+**出處**：本專案是**他人著作的改作版本**。原始著作為三師爸 Sense Bar 的 [mathruffian-dot/yaml-image-deck](https://github.com/mathruffian-dot/yaml-image-deck)（2026-07-10，MIT）。差異說明寫在 `README.md` 的〈出處與授權〉。
 
 ## 關鍵時程
 
@@ -69,5 +69,6 @@ yaml-image-deck/
 - **不綁定 Agent**：新增內容時不可寫死特定 Agent 的工具名、指令語法或安裝路徑。需要外部能力時，一律描述成「使用當前環境可用的 X」。
 - **文件語言**：所有 `.md` 用繁體中文；YAML 的**欄位名與 enum 值保持英文**（`schema.md` 有明訂），只有內容值用中文。
 - **生圖 prompt 保持英文**：`prompting.md` 裡給生圖模型的 typography 區塊維持英文原文，避免模型誤讀。
+- **不可更動 `LICENSE` 與出處聲明**：本專案是他人 MIT 著作的改作，`LICENSE` 中「Copyright (c) 2026 三師爸 Sense Bar」與 README〈出處與授權〉是 MIT 的保留義務，不可刪改或改寫成本專案原創。新增自己的修改說明可以，移除原作者署名不行。
 - **改動技能後要跑驗證**：`python tools/validate_repo.py`（CI 也會跑同一支）。
 - 修改 `agents/interface.yaml` 檔名或 `SKILL.md` frontmatter 時，記得同步改 `tools/validate_repo.py` 的檢查。
