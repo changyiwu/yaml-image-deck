@@ -42,4 +42,15 @@
 python .\skills\yaml-image-deck\scripts\validate_spec.py --spec .\skills\yaml-image-deck\assets\spec-template.yaml
 ```
 
-MIT License。
+## 出處與授權
+
+本專案改寫自同作者的原始版本 [mathruffian-dot/yaml-image-deck](https://github.com/mathruffian-dot/yaml-image-deck)（2026-07-10，MIT）。
+
+本版本的主要差異：
+
+- 移除 Codex 綁定，改為不限特定 Agent 的通用技能；生圖與打包一律使用當前環境已具備的能力。
+- 移除寫死的全域安裝器指令，改為四家 Agent 的技能目錄對照表。
+- `agents/openai.yaml` 更名為中性的 `agents/interface.yaml`。
+- 所有文件改寫為繁體中文（YAML 欄位名、版型 ID 與生圖 prompt 保持英文）。
+
+授權：MIT License，Copyright (c) 2026 三師爸 Sense Bar。詳見 [LICENSE](LICENSE)。
