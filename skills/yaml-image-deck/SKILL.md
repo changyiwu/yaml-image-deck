@@ -61,14 +61,21 @@ description: 用一份 YAML 設計系統＋版型庫＋逐頁內容，生成風�
 6. 先生成一頁具代表性的內容頁，當作黃金樣張檢查，通過後把路徑寫進 `design_system.style_reference`。
 7. 其餘頁面一頁一次生圖呼叫。使用者明確要求平行生成時，讀 `references/subagent-batching.md`，並給每個 worker 相同的 YAML 與黃金樣張。
 8. 檢查精確文字、版型、主體數量、安全區、粗圓字體與風格一致性。**只重生失敗的頁面。**
-9. 執行輸出驗證：
+9. 若生圖能力不支援 16:9，置中裁切成 16:9（已符合比例的檔案會自動略過）：
+
+   ```powershell
+   python .\scripts\crop_to_169.py --images-dir .\slides\images
+   ```
+
+   生圖前要先在 prompt 加上「關鍵內容留在中央 16:9 範圍內」的構圖約束，否則裁切會切到標題或主體。詳見 `references/prompting.md` 的〈生圖尺寸與裁切〉。
+10. 執行輸出驗證：
 
    ```powershell
    python .\scripts\verify_images.py --spec .\spec.yaml --images-dir .\slides\images
    ```
 
-10. 用當前環境可用的方式打包：每頁嵌入一張滿版圖片，匯出後重新算圖、檢查拼接圖、跑溢出檢查。
-11. 回報 PPTX 路徑、模式、來源圖片資料夾、規格路徑與最終 prompt 紀錄。
+11. 用當前環境可用的方式打包：每頁嵌入一張滿版圖片，匯出後重新算圖、檢查拼接圖、跑溢出檢查。
+12. 回報 PPTX 路徑、模式、來源圖片資料夾、規格路徑與最終 prompt 紀錄。
 
 ## 輸出模式
 

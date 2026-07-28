@@ -19,8 +19,9 @@
 
 - [x] 階段一：技能骨架完成（SKILL.md、參考文件、範本規格、驗證腳本、CI）
 - [x] 階段二：去除 Codex 綁定，改為全 Agent 通用；文件全面繁體中文化
-- [ ] 階段三：實際跑一份完整簡報驗收流程（golden sample → 全頁生圖 → 打包 → 拼接圖檢查）
-- [ ] 階段四：依實跑結果回頭修正 prompt 與版型庫
+- [x] 階段三：補上 16:9 裁切缺口（`crop_to_169.py` ＋ prompt 構圖約束），打包依賴 `python-pptx` 已安裝
+- [ ] 階段四：實際跑一份完整簡報驗收流程（golden sample → 全頁生圖 → 裁切 → 打包 → 拼接圖檢查）
+- [ ] 階段五：依實跑結果回頭修正 prompt 與版型庫
 
 ## 資料夾結構
 
@@ -46,6 +47,7 @@ yaml-image-deck/
     │   └── validation.md              退回重生條件與交付前檢查
     └── scripts/
         ├── validate_spec.py           驗 YAML 結構、頁碼連號、版型 ID 合法
+        ├── crop_to_169.py             置中裁切成 16:9（補生圖模型沒有 16:9 的缺口）
         └── verify_images.py           驗圖片存在與 16:9 比例
 ```
 
