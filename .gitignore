@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+tmp/
+output/
+
+# GDrive / Windows
+desktop.ini
+*.tmp
+~$*
+
+# 機敏檔
+.env
+*.key
+credentials.*
