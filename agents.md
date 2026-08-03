@@ -86,3 +86,4 @@ yaml-image-deck/
 - **不可更動 `LICENSE` 與出處聲明**：本專案是他人 MIT 著作的改作，`LICENSE` 中「Copyright (c) 2026 三師爸 Sense Bar」與 README〈出處與授權〉是 MIT 的保留義務，不可刪改或改寫成本專案原創。新增自己的修改說明可以，移除原作者署名不行。
 - **改動技能後要跑驗證**：`python tools/validate_repo.py`（CI 也會跑同一支）。
 - 修改 `agents/interface.yaml` 檔名或 `SKILL.md` frontmatter 時，記得同步改 `tools/validate_repo.py` 的檢查。
+- **repo 是公開的**：commit 前確認沒有夾帶未公開素材、金鑰或個資。
