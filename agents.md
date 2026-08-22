@@ -9,7 +9,7 @@
 
 技能本身**不綁定任何特定 Agent**：生圖與打包一律使用當前環境已具備的能力，可安裝到 Claude Code、Codex、OpenCode、Antigravity 等任一技能目錄。
 
-**出處**：本專案是**他人著作的改作版本**。原始著作為三師爸 Sense Bar 的 [mathruffian-dot/yaml-image-deck](https://github.com/mathruffian-dot/yaml-image-deck)（2026-07-10，MIT）。差異說明寫在 `README.md` 的〈出處與授權〉。
+**出處**：本專案是**他人著作的改作版本**。原始著作為原作者三師爸的 [mathruffian-dot/yaml-image-deck](https://github.com/mathruffian-dot/yaml-image-deck)（2026-07-10，MIT）。差異說明寫在 `README.md` 的〈出處與授權〉。
 
 ## 關鍵時程
 

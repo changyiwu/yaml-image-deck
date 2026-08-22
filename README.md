@@ -44,7 +44,7 @@ python .\skills\yaml-image-deck\scripts\validate_spec.py --spec .\skills\yaml-im
 
 ## 出處與授權
 
-本專案是**改作版本**，原始著作為三師爸 Sense Bar 的 [mathruffian-dot/yaml-image-deck](https://github.com/mathruffian-dot/yaml-image-deck)（2026-07-10 發布，MIT License）。
+本專案是**改作版本**，原始著作為原作者三師爸的 [mathruffian-dot/yaml-image-deck](https://github.com/mathruffian-dot/yaml-image-deck)（2026-07-10 發布，MIT License）。
 
 原始設計——YAML 設計合約、受控版型庫、黃金樣張鎖風格、粗圓中文字體政策——皆由原作者提出。
 
