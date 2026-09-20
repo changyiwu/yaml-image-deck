@@ -39,7 +39,7 @@
 ## 驗證
 
 ```powershell
-python .\skills\yaml-image-deck\scripts\validate_spec.py --spec .\skills\yaml-image-deck\assets\spec-template.yaml
+python ./skills/yaml-image-deck/scripts/validate_spec.py --spec ./skills/yaml-image-deck/assets/spec-template.yaml
 ```
 
 ## 出處與授權

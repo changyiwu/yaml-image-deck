@@ -54,7 +54,7 @@ description: 用一份 YAML 設計系統＋版型庫＋逐頁內容，生成風�
 4. 驗證規格：
 
    ```powershell
-   python .\scripts\validate_spec.py --spec .\spec.yaml
+   python ./scripts/validate_spec.py --spec ./spec.yaml
    ```
 
 5. 依此順序編譯每頁 prompt：畫布與安全區 → 版型 → 頁面畫面 → 精確文字 → 全域風格 → 字體 → 參考圖 → 負面約束。
@@ -64,14 +64,14 @@ description: 用一份 YAML 設計系統＋版型庫＋逐頁內容，生成風�
 9. 若生圖能力不支援 16:9，置中裁切成 16:9（已符合比例的檔案會自動略過）：
 
    ```powershell
-   python .\scripts\crop_to_169.py --images-dir .\slides\images
+   python ./scripts/crop_to_169.py --images-dir ./slides/images
    ```
 
    生圖前要先在 prompt 加上「關鍵內容留在中央 16:9 範圍內」的構圖約束，否則裁切會切到標題或主體。詳見 `references/prompting.md` 的〈生圖尺寸與裁切〉。
 10. 執行輸出驗證：
 
    ```powershell
-   python .\scripts\verify_images.py --spec .\spec.yaml --images-dir .\slides\images
+   python ./scripts/verify_images.py --spec ./spec.yaml --images-dir ./slides/images
    ```
 
 11. 用當前環境可用的方式打包：每頁嵌入一張滿版圖片，匯出後重新算圖、檢查拼接圖、跑溢出檢查。

@@ -39,7 +39,7 @@ Render the quoted text verbatim and add no other characters.
 處理方式：**選最接近的橫式尺寸生圖，再置中裁切成 16:9**。
 
 ```powershell
-python .\scripts\crop_to_169.py --images-dir .\slides\images
+python ./scripts/crop_to_169.py --images-dir ./slides/images
 ```
 
 1536x1024 會裁成 1536x864，**上下各切掉 80 px**。所以生圖 prompt 必須額外加上這段約束：
