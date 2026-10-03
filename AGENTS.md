@@ -1,7 +1,7 @@
 # YAML Image Deck（專案藍圖）
 
 > 本檔為跨 Agent 通用的專案藍圖（AGENTS.md 開放標準）。任何 Agent 的每個 session 都應先讀本檔＋`handoff.md`。
-> Claude Code 預設只在沒有 `CLAUDE.md` 時才讀 `AGENTS.md`，故由 `CLAUDE.md` 的 `@AGENTS.md` import 本檔；Claude 專屬規範寫在 `CLAUDE.md`。
+> Claude Code 預設只在沒有 `CLAUDE.md` 時才讀 `AGENTS.md`，故由 `CLAUDE.md` 的 `@AGENTS.md` import 本檔（`CLAUDE.md` 只有這一行）；Claude 專屬規範寫在本檔〈Claude Code 專屬〉一節。
 
 ## 專案簡介
 
@@ -87,3 +87,7 @@ yaml-image-deck/
 - **改動技能後要跑驗證**：`python tools/validate_repo.py`（CI 也會跑同一支）。
 - 修改 `agents/interface.yaml` 檔名或 `SKILL.md` frontmatter 時，記得同步改 `tools/validate_repo.py` 的檢查。
 - **repo 是公開的**：commit 前確認沒有夾帶未公開素材、金鑰或個資。
+
+## Claude Code 專屬
+
+- 本專案要生圖時，使用 `claude-draw` 技能（gpt-image-2）。但**不可把這個綁定寫進 `skills/yaml-image-deck/` 裡的任何檔案**——技能本體必須保持不綁定 Agent。
